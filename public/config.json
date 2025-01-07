@@ -9,7 +9,7 @@
        "en-US": {
            "name": "Twilio SMS",
            "description": "Send Twilio SMS with Journey Builder",
-           "TwilioMessage":"test"
+           "TwilioMessage": "test"
        }
     },
     "arguments": {
@@ -17,11 +17,11 @@
             "inArguments": [
                 {
                   "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" 
-                }               
+                  "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}"
+                }
             ],
             "outArguments": [],
-            "url": "https://twilio-sfmc.herokuapp.com/journeybuilder/execute",
+            "url": "https://twilio-sfmc-exemple.onrender.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -30,49 +30,49 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
-       "save": {
-           "url": "https://twilio-sfmc.herokuapp.com/save",
+        "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
+        "save": {
+            "url": "https://twilio-sfmc-exemple.onrender.com/save",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "publish": {
-           "url": "https://twilio-sfmc.herokuapp.com/publish",
+        },
+        "publish": {
+            "url": "https://twilio-sfmc-exemple.onrender.com/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "validate": {
-           "url": "https://twilio-sfmc.herokuapp.com/validate",
+        },
+        "validate": {
+            "url": "https://twilio-sfmc-exemple.onrender.com/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "stop": {
-           "url": "https://twilio-sfmc.herokuapp.com/stop",
+        },
+        "stop": {
+            "url": "https://twilio-sfmc-exemple.onrender.com/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       }
+        }
     },
     "wizardSteps": [
-       { "label": "Create SMS Message", "key": "step1" }
+        { "label": "Create SMS Message", "key": "step1" }
     ],
     "userInterfaces": {
-       "configModal": {
-           "height": 600,
-           "width": 800,
-           "fullscreen": false
-       }
+        "configModal": {
+            "height": 600,
+            "width": 800,
+            "fullscreen": false
+        }
     },
     "schema": {
         "arguments": {
@@ -82,37 +82,37 @@
                         "accountSid": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "out"
                         }
-                    },                    
+                    },
                     {
                         "authToken": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "out"
                         }
-                    },                    
+                    },
                     {
                         "from": {
                             "dataType": "Phone",
                             "isNullable": true,
-                            "direction": "out"   
+                            "direction": "out"
                         }
-                    },                    
+                    },
                     {
                         "to": {
                             "dataType": "Phone",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "out"
                         }
                     },
                     {
                         "body": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "out"
                         }
-                    },                    
+                    },
                     {
                         "email": {
                             "dataType": "Email",
@@ -126,3 +126,4 @@
         }
     }
 }
+
